@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Polling Whiteboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .toolbar button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toolbar button:hover {
+            background-color: #0056b3;
+        }
+
+        .toolbar button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        #board {
+            border: 2px solid #333;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button, select {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        select {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        button:active, select:focus {
+            outline: 2px solid #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <button id="undo" title="Undo">
+                <img src="img/undo.png" alt="Undo">
+            </button>
+            <button id="redo" title="Redo">
+                <img src="img/redo.png" alt="Redo">
+            </button>
+        </div>
+        <canvas id="board" width="800" height="600"></canvas>
+    </div>
+    <div class="controls">
+        <button id="refresh">Refresh</button>
+        <button id="clear-draw">Clear Drawing</button>
+        <select id="filter-select">
+        </select>
+        <button id="apply-filter">Apply Filter</button>
+        <input type="color" id="color-picker" value="#000000"/>
+        <label for="brush-size">Brush Size:</label>
+        <input type="range" id="brush-size" min="1" max="50" value="5"/>
+        <label for="text-size">Text Size:</label>
+        <input type="range" id="text-size" min="12" max="72" value="16"/>
+        <button id="save-image">Save as Image</button>
+        <label for="tool-select">Tool:</label>
+        <select id="tool-select">
+            <option value="brush">Brush</option>
+            <option value="line">Line</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="circle">Circle</option>
+            <option value="eraser">Eraser</option>
+            <option value="text">Text</option>
+        </select>
+    </div>
+    <script src="canvas.js"></script>
+</body>
+</html>

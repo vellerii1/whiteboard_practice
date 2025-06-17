@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pytest
+requests
+httpx
+pybind11
+-e ./cpp_module
