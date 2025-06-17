@@ -45,16 +45,3 @@ Whiteboard
 8. **Save as Image** – зберігає поточний малюнок у форматі PNG.
 
 ---
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/3f28d16c-88dc-4563-b1aa-926144a2fbbb" alt="skebob" />
-</div>
-
-https://github.com/user-attachments/assets/666b5ee6-4937-4d59-a668-0587dd0002d0
-
-
-
-
-<audio controls>
-  <source src="https://ilnitskijmaksim.github.io/Whiteboard/img/skebob.mp3" type="audio/mpeg">
-</audio>
